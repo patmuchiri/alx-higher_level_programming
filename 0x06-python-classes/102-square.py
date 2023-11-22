@@ -50,23 +50,23 @@ class Square:
     def __lt__(self, other):
         """Override the less than operator."""
         if isinstance(other, Square):
-            return self.__size < other.__size
+            return self.area() < other.area()
         return NotImplemented
 
     def __le__(self, other):
         """Override the less than or equal to operator."""
         if isinstance(other, Square):
-            return self.__size <= other.__size
+            return self.area() <= other.area()
         return NotImplemented
 
     def __gt__(self, other):
         """Override the greater than operator."""
         if isinstance(other, Square):
-            return self.__size > other.__size
+            return self.area() > other.area()
         return NotImplemented
 
     def __ge__(self, other):
         """Override the greater than or equal to operator."""
         if isinstance(other, Square):
-            return self.__size >= other.__size
+            return self.area() >= other.area()
         return NotImplemented
