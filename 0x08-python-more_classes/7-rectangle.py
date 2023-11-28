@@ -4,7 +4,7 @@
 
 class Rectangle:
     """Represent a rectangle.
-    
+
 
     Attributes:
         number_of_instances (int): The number of Rectangle instances.
@@ -62,25 +62,17 @@ class Rectangle:
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """Return the printable representation of the Rectangle.
-
-        Represents the rectangle with # character.
-        """
+        """Return the printable representation of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
             return ("")
 
-        rect = []
-        for i in range(self.__height):
-            [rect.append('#') for j in range(self.__width)]
-            if i != self.height - 1:
-                rect.append("\n")
-        return ("".join(rect))
+        rect = [str(self.print_symbol) * self.__width
+                for _ in range(self.__height)]
+        return ("\n".join(rect))
 
     def __repr__(self):
         """Return the string representation of the Rectangle. """
-        rect = "Rectangle(" + str(self.__width)
-        rect += ", " + str(self.__height) + ")"
-        return (rect)
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         """Print a message for every deletion of a Rectangle."""
