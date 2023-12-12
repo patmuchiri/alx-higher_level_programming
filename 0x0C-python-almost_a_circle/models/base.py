@@ -49,8 +49,9 @@ class Base:
                 jsonfile.write(Base.to_json_string(list_dict))
 
     def from_json_string(json_string):
-        """
-
+        """returns the JSON string representation of a list
+        Args:
+            list_dictionaries: list to serialize to json
         """
         if json_string is None or json_string == "[]":
             return []
