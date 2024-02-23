@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-"""Start link class to table in database
+"""Start link class to table in database 
 """
 import sys
+from os.path import abspath, dirname
+sys.path.append(dirname(abspath(__file__)))
+
 from model_state import Base, State
 
 from sqlalchemy import (create_engine)
