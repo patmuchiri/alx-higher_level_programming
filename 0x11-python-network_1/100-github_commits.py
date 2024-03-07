@@ -11,8 +11,6 @@ if __name__ == '__main__':
     url = 'https://api.github.com/repos/{}/{}/commits'.format(owner, repo)
 
     res = requests.get(url)
-
-
     try:
         data = res.json()
         for i, obj in enumerate(data):
